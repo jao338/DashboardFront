@@ -3,7 +3,7 @@ import useApi from '../../../composables/useApi';
 import { api } from '../../../boot/axios';
 import { Notify } from 'quasar';
 
-export default function Service(url) {
+export default function Service(url: any) {
   const { index, post, update, destroy } = useApi(url);
 
   const games = async () => {

@@ -1,21 +1,22 @@
 <template>
-  <q-card>
-    <q-card-section>
-      <q-img :src="image" style="width: 300px" />
-      <div class="absolute-bottom text-subtitle2 text-center">
+  <q-card style="min-height: 30vh">
+    <q-card-section class="q-px-none q-pt-none">
+      <q-img :src="image" />
+      <div class="q-pl-md q-pt-md text-subtitle2">
         {{ title }}
       </div>
     </q-card-section>
-    <q-card-section>
+    <q-card-section class="q-pt-none">
       <slot name="content"></slot>
     </q-card-section>
   </q-card>
 </template>
 
 <script setup>
+
 defineProps({
   image: {
-    type    : String,
+    type: String,
     required: false
   },
   title: {
